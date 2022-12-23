@@ -4,7 +4,7 @@
     </head>
     <style>
         body{
-            background-color: darkslategray;
+            background-color: #36454F;
             color: #fff;
             font-family: monospace;
         }
@@ -15,15 +15,16 @@
             text-align:center;
         }
         .a{
-            background-color: #4b6e6e;
+            background-color: #232d33;
             padding: 20px;
+            box-shadow: 0px 0px 4px #232d33;
         }
         .a h2 spn{
             color:#2ea6b8;
             letter-spacing: 2px;
         }
         .a1{
-            background-color: #396363;
+            background-color: #36454F;
             padding: 20px;
             display: grid;
             gap: 20px;
@@ -36,13 +37,17 @@
         .text{
             color: #ffffff80;
         }
+        form .submitIn{
+            background-color: #232d33;
+            color:#fff;
+        }
     </style>
     <form action="/post/" method="GET">
         <input type="text" name="q" />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search" style="color:#fff;background-color:#232d33 ;border:none; padding:3px 20px;box-shadow: 0px 0px 4px #888888;" />
     </form>
     <body>
-        <h1>Posts Search <spn>{{search}}</spn></h1>
+        <h1>Posts Search <spn style="color:#2ea6b8;">{{search}}</spn></h1>
         <div class='a1'>
             {% for post in posts %}
             <div class='a'>
@@ -55,5 +60,6 @@
             </div>
             {% endfor %}
         </div>
+        <a href="/home" style="color:#fff;background-color:#232d33 ;border:none; padding:3px 20px;box-shadow: 0px 0px 4px #888888;text-decoration: none; position:fixed;z-index: 1000;bottom:10px;right:0;">Home</a>
     </body>
 </html>

@@ -5,6 +5,10 @@ from blog.models import Post
 from django.db.models import Q
 
 # Create your views here.
+def index(request):
+    return render(request,"index.html")
+
+
 
 def addPosts(request):
     if request.method == "POST":
